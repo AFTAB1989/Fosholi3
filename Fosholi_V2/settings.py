@@ -49,7 +49,7 @@ ROOT_URLCONF = 'Fosholi_V2.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'Farmer/templates')]
+        'DIRS': [os.path.join(BASE_DIR, 'DC/templates')]
         ,
         'APP_DIRS': True,
         'OPTIONS': {
