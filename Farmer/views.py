@@ -23,9 +23,20 @@ def login_pg(request):
             dc = DC.objects.all().filter(dc_id=dcId, dc_password=dcPswrd)
 
             if dc:
-                return redirect('/DC/')
+                return redirect('DC/')
             else:
                 messages.success(request, 'Invalid DC id or Password...!!')
-                return redirect('login_pg')
+                return redirect(login_pg)
+
+        elif actor == "upc":
+            upcId = request.POST.get('user_id')
+            upcPswrd = request.POST.get('user_password')
+            upc = UpChairman.objects.all().filter(upc_id=upcId, upc_password=upcPswrd)
+
+            if upc:
+                return redirect('UpChairman/')
+            else:
+                messages.success(request, 'Invalid Up Chairman id or Password...!!')
+                return redirect(login_pg)
 
     return render(request, 'login.html')
