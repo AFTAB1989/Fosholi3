@@ -1,4 +1,4 @@
-from pyexpat.errors import messages
+from django.contrib import messages
 
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
@@ -23,19 +23,9 @@ def login_pg(request):
             dc = DC.objects.all().filter(dc_id=dcId, dc_password=dcPswrd)
 
             if dc:
-                return redirect('DC/show')
+                return redirect('/DC/')
             else:
-                messages.error(request, 'Invalid DC id or Password...!!')
-                return redirect(login_pg)
+                messages.success(request, 'Invalid DC id or Password...!!')
+                return redirect('login_pg')
 
-            # elif actor=="upc":
-            #    upcId = request.POST.get('user_id')
-            #    upcPswrd = request.POST.get('user_password')
-            #    dc = DC.objects.all().filter(dc_id=dcId, dc_Password=dcPswrd)
-            #
-            #    if dc:
-            #        return redirect('DC/show')
-            #    else:
-            #        messages.info(request, 'Invalid DC id or Password...!!')
-            #        return redirect(login_pg)
     return render(request, 'login.html')
