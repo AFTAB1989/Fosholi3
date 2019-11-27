@@ -4,5 +4,6 @@ from DC import views
 
 urlpatterns = [
     path('', views.show, name='DChomeDisplay'),
+    path('register',views.register),
     #  path('upc_reg', views.upc_reg, name='homeToLogin'),
 ]
