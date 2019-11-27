@@ -52,6 +52,11 @@ TEMPLATES = [
 
         'DIRS': [
             os.path.join(BASE_DIR, 'Farmer/templates'),
+            os.path.join(BASE_DIR, 'DC/templates'),
+            os.path.join(BASE_DIR, 'FieldAgent/templates'),
+            os.path.join(BASE_DIR, 'Miller/templates'),
+            os.path.join(BASE_DIR, 'UNO/templates'),
+            os.path.join(BASE_DIR, 'UpChairman/templates'),
             os.path.join(BASE_DIR, 'templates'),
         ],
 
