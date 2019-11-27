@@ -1,4 +1,4 @@
-
+{% comment %}  extends base from templates/base.html {% endcomment %}
 {% extends 'base.html' %}
 
 {% block content %}
@@ -7,9 +7,12 @@
     <h2 clas="mt-5">Register a new UP Chaiman </h2>
 
     <form method="POST">
+
+        {% comment %} generating form from views {% endcomment %}
         {% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="Submit">
+
     </form>
 </div>
 
