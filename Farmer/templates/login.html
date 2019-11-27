@@ -52,6 +52,15 @@
                     <div class="form-group">
                         <button class="btn btn-primary btn-block btn-lg" type="submit" value="Log In">Log In</button>
                     </div>
+                       {% for message in messages %}
+
+                    <div class="alert alert-success">
+                        <a class="close" href="#" data-dismiss="alert">×</a>
+
+                        {{ Invalid_DC_id_or_Password}}
+
+                    </div>
+            {% endfor %}
                     <a class="text-danger text-center" href="#"><p>Forgot password ?</p></a>
                 </form>
                 

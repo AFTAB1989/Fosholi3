@@ -25,7 +25,7 @@ def login_pg(request):
             if dc:
                 return redirect('DC/show')
             else:
-                messages.info(request, 'Invalid DC id or Password...!!')
+                messages.error(request, 'Invalid DC id or Password...!!')
                 return redirect(login_pg)
 
             # elif actor=="upc":
