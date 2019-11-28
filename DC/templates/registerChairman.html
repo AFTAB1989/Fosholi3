@@ -1,19 +1,28 @@
-{% extends 'base.html' %}
+{% extends 'base-dc.html' %}
+{% load crispy_forms_tags %}
 
 {% block content %}
-<div class="container mt-5 pt-5">
-    <p class="mt-5"></p>
-    <h2 clas="mt-5">Register a new UP Chaiman </h2>
+ <section class="faremer-reigstration">
+        <div class="container dash-block clearfix">
+            <h2 class="text-center py-5">Register new Up Chaiman</h2>
+
 
     <form method="POST">
-
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-success">
+                {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
         {% comment %} generating form from views {% endcomment %}
         {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="Submit">
+        {{ form|crispy }}
+        <input class="btn btn-success btn-block btn-lg mx-auto" type="submit" value="Submit">
 
     </form>
-</div>
+        </div>
+    </section>
 
 {% endblock %}
 

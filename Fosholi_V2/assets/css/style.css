@@ -1,0 +1,29 @@
+body{
+  padding-top: 100px;
+  background: #F4F6F9 !important;
+}
+.gradient {
+  background: linear-gradient(120deg,green,#3BC47D);
+  color: #fff;
+}
+
+.heading{
+  margin-bottom:40px !important;
+}
+.portfolio-block {
+  padding-bottom: 60px;
+  padding-top: 20px;
+
+}
+.dash-block{
+  box-shadow: 0 2px 10px rgba(0,0,0,.1);
+  background: #fff;
+  padding: 20px;
+  border-top: 3px solid red; 
+}
+.dash-summary{
+    display: flex;
+    justify-content: space-around;
+}
+
+

@@ -1,6 +1,7 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from DC.forms import registerForm
+from django.contrib import messages
 
 # DC index page
 def show(request):
@@ -19,8 +20,10 @@ def register(request):
 
         if form.is_valid():
             form.save(commit=True) #saves from data in model
-            return show(request)
+            messages.success(request, f'New account created successfully !')
+            return redirect(register)
         else:
-            print('Invalid form')
+                messages.success(request, f'Could not create new acount. Something went wrong')
+                return render(request, 'registerChairman.html',{'form':form})
 
     return render(request, 'registerChairman.html',{'form':form})

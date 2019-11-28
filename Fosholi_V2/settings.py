@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
 
     # Registered apps
 
@@ -33,6 +34,7 @@ INSTALLED_APPS = [
     'DC',
     'Miller',
 ]
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -71,6 +73,7 @@ TEMPLATES = [
         },
     },
 ]
+STATIC_DIR = os.path.join(BASE_DIR,"static")
 
 WSGI_APPLICATION = 'Fosholi_V2.wsgi.application'
 
