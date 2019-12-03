@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Farmer(models.Model):
-    f_id = models.CharField(primary_key=True, max_length=5, blank=False, unique=True)
+    f_id = models.CharField(primary_key=True, max_length=15, blank=False, unique=True)
     f_name = models.CharField(max_length=50)
     f_phone = models.CharField(max_length=15)
     f_address = models.CharField(max_length=250)
