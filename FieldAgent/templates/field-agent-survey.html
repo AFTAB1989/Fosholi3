@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'base-FA.html' %}
 
 {% block content %}
 
@@ -32,6 +32,8 @@
                  <div class="form-group"><button class="btn btn-success btn-block btn-lg" type="submit">Submit
                     Survey</button></div>
             </form>
+
+            <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'add_survey' %}">Survey List</a></li>
 
 
 

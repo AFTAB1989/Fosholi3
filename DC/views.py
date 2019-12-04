@@ -5,6 +5,9 @@ from DC.forms import registerForm
 from django.contrib import messages
 
 # DC index page
+from UpChairman.forms import RegisterForm
+
+
 def show(request):
     return render(request, 'DChome.html')
 
