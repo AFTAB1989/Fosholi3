@@ -1,7 +1,6 @@
 from django.contrib import messages
-
-from django.http import HttpResponse
 from django.shortcuts import render, redirect
+
 from DC.models import DC
 from UpChairman.models import UpChairman
 from UNO.models import UNO
@@ -74,6 +73,17 @@ def login_pg(request):
                 return redirect(fHome)
             else:
                 messages.error(request, 'Invalid Farmer id or Password...!!')
+                return redirect(login_pg)
+
+        elif actor == "miller":
+            millerId = request.POST.get('user_id')
+            millerPswrd = request.POST.get('user_password')
+            miller = Miller.objects.all().filter(m_id=millerId, m_password=millerPswrd)
+
+            if miller:
+                return redirect('/Miller/')
+            else:
+                messages.error(request, 'Invalid miller id or Password...!!')
                 return redirect(login_pg)
 
     return render(request, 'login.html')
