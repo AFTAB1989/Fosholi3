@@ -23,7 +23,7 @@ def login_pg(request):
             dc = DC.objects.all().filter(dc_id=dcId, dc_password=dcPswrd)
 
             if dc:
-                return redirect('DC/')
+                return redirect('/DC/')
             else:
                 messages.success(request, 'Invalid DC id or Password...!!')
                 return redirect(login_pg)
