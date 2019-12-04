@@ -14,9 +14,15 @@ class Miller(models.Model):
     m_password = models.CharField(max_length=50)
     m_nid_no = models.CharField(max_length=25, blank=False, unique=True)
     m_license_no = models.CharField(max_length=25)
+    upc_id = models.ForeignKey(UpChairman, on_delete=models.CASCADE)
+
+
+class MillerSeasonReq(models.Model):
+    millerSeasonReq_id = models.CharField(primary_key=True, max_length=5, blank=False, unique=True)
+    m_id = models.ForeignKey(Miller, on_delete=models.CASCADE)
+
     stock_capacity_detail = models.CharField(max_length=250)
     season_stock_availability = models.CharField(max_length=250)
-    upc_id = models.ForeignKey(UpChairman, on_delete=models.CASCADE)
 
 
 class TradeList(models.Model):
