@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Survey List</title>
+</head>
+<body>
+{% block content %}
+    <div class="container">
+        <table class="table table-striped">
+    {% csrf_token %}
+       <thead>
+           <th> Survey Id</th>
+           <th> Farmer Id</th>
+           <th> Season Id</th>
+           <th> AreaOf Farmed Land</th>
+           <th> Farmed Crop</th>
+           <th> Crop Type</th>
+           <th> Estimated Crop</th>
+           <th> Farming Start Date</th>
+           <th> Farming End Date</th>
+       </thead>
+
+        <tbody>
+         {% for s in surveylist %}
+             <tr>
+            <td>{{ s.surveyId }}</td>
+            <td>{{ s.fId }}</td>
+            <td>{{s.seasonId}}</td>
+            <td>{{s.areaOfFarmedLand}}</td>
+            <td>{{s.farmedCrop}}</td>
+            <td>{{s.cropType}}</td>
+            <td>{{s.estimatedCrop}}</td>
+            <td>{{s.farmingStartDate}}</td>
+            <td>{{s.farmingEndDate}}</td>
+             </tr>
+        {% endfor %}
+        </tbody>
+
+        {% endblock %}
+    </table>
+
+    </div>
+
+</body>
+</html>

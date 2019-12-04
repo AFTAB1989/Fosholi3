@@ -23,3 +23,15 @@ class SeasonReport(models.Model):
     field_size = models.CharField(max_length=5)
     estimated_crop = models.IntegerField()
     estimated_cost = models.FloatField()
+
+
+class SeasonalServey(models.Model):
+    surveyId = models.CharField(primary_key=True, max_length=5, blank=False)
+    fId = models.ForeignKey(Farmer, on_delete=models.CASCADE)
+    seasonId = models.ForeignKey(SeasonReport, on_delete=models.CASCADE)
+    areaOfFarmedLand = models.IntegerField()
+    farmedCrop = models.CharField(max_length=20)
+    cropType = models.CharField(max_length=10)
+    estimatedCrop = models.IntegerField()
+    farmingStartDate = models.DateField()
+    farmingEndDate = models.DateField()

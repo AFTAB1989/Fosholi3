@@ -9,29 +9,31 @@
         <div class="container dash-block p-5">
             <h2 class="text-center py-4">Survey form</h2>
 
-            <form>
-
+            <form action="addSurvey" method="POST">
+                {% csrf_token %}
+                <div class="form-group"><label for="name">Survey id</label><input class="form-control item" type="text"
+                        id="name" name="sID"></div>
                 <div class="form-group"><label for="name">Farmer id</label><input class="form-control item" type="text"
-                        id="name"></div>
+                        id="name" name="fID"></div>
                 <div class="form-group"><label for="name">Season id</label><input class="form-control item" type="text"
-                        id="name"></div>
+                        id="name" name="seasonID"></div>
                 <div class="form-group"><label for="name">Area of farmed land</label><input class="form-control item"
-                        type="text" id="name"></div>
+                        type="text" id="name"name="areaof"></div>
                 <div class="form-group"><label for="name">Farmed Crop</label><input class="form-control item"
-                        type="text" id="name"></div>
+                        type="text" id="name"name="fCrop"></div>
                 <div class="form-group"><label for="name">Crop type</label><input class="form-control item" type="text"
-                        id="name"></div>
+                        id="name"name="cType"></div>
                 <div class="form-group"><label for="name">Estimated crop</label><input class="form-control item"
-                        type="number" id="name"></div>
+                        type="number" id="name"name="estCrop"></div>
                 <div class="form-group"><label for="name">Farming start date</label><input class="form-control item"
-                        type="date" id="name"></div>
-                <div class="form-group"><label for="name">Estimated date</label><input class="form-control item"
-                        type="date" id="name"></div>
-
+                        type="date" id="name"name="fStart"></div>
+                <div class="form-group"><label for="name">Estimated End date</label><input class="form-control item"
+                        type="date" id="name"name="fEnd"></div>
+                 <div class="form-group"><button class="btn btn-success btn-block btn-lg" type="submit">Submit
+                    Survey</button></div>
             </form>
 
-            <div class="form-group"><button class="btn btn-success btn-block btn-lg" type="submit">Submit
-                    Survey</button></div>
+
 
         </div>
 
