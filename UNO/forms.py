@@ -1,9 +1,9 @@
 from django import forms
-from UpChairman import models
+from FieldAgent import models
 
 
 # From to register new upchaiman by upchairman model
-class registerForm(forms.ModelForm):
+class RegisterForm(forms.ModelForm):
     class Meta:
-        model = models.UpChairman
+        model = models.FieldAgent
         exclude = ()
