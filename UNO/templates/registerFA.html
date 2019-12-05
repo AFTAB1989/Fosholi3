@@ -1,0 +1,29 @@
+{% extends 'base-uno.html' %}
+{%  load crispy_forms_tags  %}
+{% block content %}
+    <div class="container">
+   <h1> FA Register page</h1>
+
+        <div class="dash-block mt-4">
+            <h3 class="text-center my-3 ">Create new agent id</h3>
+            <div>
+              <form method="POST">
+                  <div class="row mt-5">
+                    <div class="col-md-6 m-auto">
+                        <h3>Agent Registration Form</h3>
+                        {% if messages %}
+                            {% for message in messages %}
+                                {{ message }}
+                            {% endfor %}
+                        {% endif %}
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <input class="btn btn-success btn-block btn-lg mx-auto" type="submit" value="submit">
+                    </div>
+</div>
+              </form>
+            </div>
+    </div>
+    </div>
+</div>
+{% endblock %}
