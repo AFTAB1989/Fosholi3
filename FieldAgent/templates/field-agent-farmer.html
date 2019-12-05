@@ -1,36 +1,28 @@
-{% extends 'base.html' %}
+{% extends 'base-FA.html' %}
+{%  load crispy_forms_tags  %}
 
 {% block content %}
 
     <section class="faremer-reigstration">
         <div class="container dash-block">
-            <h2 class="text-center py-4">Register farmer</h2>
-            <div class="row m-3">
-                <div class="col-md-6">
-                    <h3>Farmer personal details</h3>
-                    <form action="">
-                            <div class="form-group"><label for="name">Farmer id</label><input class="form-control item" type="text" id="name"></div>
-                            <div class="form-group"><label for="name">Farmer password</label><input class="form-control item" type="text" id="name"></div>
-                            <div class="form-group"><label for="name">Farmer name</label><input class="form-control item" type="text" id="name"></div>
-                            <div class="form-group"><label for="subject">Farmer phone no</label><input class="form-control item" type="text" id="subject"></div>
-                            <div class="form-group"><label for="subject">Farmer address</label><input class="form-control item" type="text" id="subject"></div> 
-                            <div class="form-group"><label for="subject">Union</label><input class="form-control item" type="text" id="subject"></div>
-                            <div class="form-group"><label for="subject">Upazilla</label><input class="form-control item" type="text" id="subject"></div>
-                            <div class="form-group"><label for="subject">District</label><input class="form-control item" type="text" id="subject"></div>
-                    
+            <h2 class="text-center py-1">Register farmer</h2>
 
-                </div>
-                <div class="col-md-6">
-                    <h3>Land details</h3>
-                    
-                    <div class="form-group"><label for="name">Land address</label><input class="form-control item" type="text" id="name"></div>
-                    <div class="form-group"><label for="name">Union</label><input class="form-control item" type="text" id="name"></div>
-                    <div class="form-group"><label for="name">Upazilla</label><input class="form-control item" type="text" id="name"></div>
-                    <div class="form-group"><label for="name">District</label><input class="form-control item" type="text" id="name"></div>
-                    <div class="form-group"><label for="name">Total land area</label><input class="form-control item" type="number" id="name"></div>
-                   </div>
-                <div class="form-group"><button class="btn btn-success btn-block btn-lg mx-auto" type="submit">Submit</button></div>
-            </div>
+
+                    <h3>Farmer personal details</h3>
+                    <form method="POST">
+
+                          <h3>Add new farmer</h3>
+                        {% if messages %}
+                            {% for message in messages %}
+                                {{ message }}
+                            {% endfor %}
+                        {% endif %}
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <input class="btn btn-success btn-block btn-lg mx-auto" type="submit" value="submit">
+                    </form>
+        <!--<li class="nav-item" role="presentation"><a class="nav-link" href="{#% url 'add_survey' %#}">Farmer List</a></li>
+-->
 
         </div>
 

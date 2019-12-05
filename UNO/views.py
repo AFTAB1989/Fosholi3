@@ -1,15 +1,16 @@
 from django.contrib import messages
-from django.http import HttpResponse
 from django.shortcuts import render, redirect
 
+from FieldAgent import models
 from UNO.forms import RegisterForm
 
 
-def show(request):
-    return render(request, 'uno-agent.html')
+def faList(request):
+    allFa = models.FieldAgent.objects.all()
+    return render(request, 'uno-agent.html', {'agentList': allFa})
 
 
-# UPC registering UNO page
+# UNO registering FA
 def register(request):
     form = RegisterForm()
 
@@ -21,6 +22,6 @@ def register(request):
             messages.success(request, f'New Field Agent added successfully !')
             return redirect(register)
         else:
-            messages.success(request, f'Could not create new account. Something went wrong')
+            messages.error(request, f'Could not create new account. Something went wrong')
             return render(request, 'registerFA.html', {'form': form})
     return render(request, 'registerFA.html', {'form': form})
