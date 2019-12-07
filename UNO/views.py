@@ -3,11 +3,15 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 
 from UNO.forms import RegisterForm
+from FieldAgent import models
 
 
 def show(request):
     return render(request, 'uno-agent.html')
 
+def unoHome(request):
+    totalsurvey = models.SeasonalServey.objects.all().count()    
+    return render(request, 'uno-dashboard.html',{'ts':totalsurvey})
 
 # UPC registering UNO page
 def register(request):

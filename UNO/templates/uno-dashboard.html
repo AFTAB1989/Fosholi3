@@ -1,0 +1,52 @@
+{% extends 'base-uno.html' %}
+
+{% block content %}
+
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-md-3 dash-block mr-2">
+            <h3>Total surveys done - </h3>
+            <p class="display-3 text-center">{{ ts }}</p>
+            <a href="#">See survey list >>></a>
+        </div>
+        <div class="col-md-4 dash-block mr-2">
+            <h3>Farmers surveyed - </h3>
+            <p class="display-3 text-center">20</p>
+            <a href="#">See farmers agent list >>></a>
+        </div>
+        <div class="col-md-3 dash-block mr-2">
+            <h3>Total farmed land </h3>
+            <p class="display-3 text-center">30</p><p> hecters </p>
+            <a href="#">See land details >>></a>
+        </div>
+        <div class="col-md-5 dash-block mt-3 mr-2">
+            <h3>Crops farmed </h3>
+            <div class="d-flex justify-content-around">
+                <p>Rice </p>
+                <p>500kg </p>
+                
+            </div>
+            <hr>
+            <div class="d-flex justify-content-around">
+                <p>Rice </p>
+                <p>500kg </p>
+                
+            </div>
+            <hr>
+            <div class="d-flex justify-content-around">
+                <p>Rice </p>
+                <p>500kg </p>
+                
+            </div>
+            <hr>
+            <a href="#">See more >>></a>
+        </div>
+        
+
+    </div>
+
+</div>
+
+{% endblock %}

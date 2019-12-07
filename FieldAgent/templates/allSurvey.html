@@ -19,6 +19,7 @@
            <th> Estimated Crop</th>
            <th> Farming Start Date</th>
            <th> Farming End Date</th>
+           <th>Action</th>
        </thead>
 
         <tbody>
@@ -33,14 +34,17 @@
             <td>{{s.estimatedCrop}}</td>
             <td>{{s.farmingStartDate}}</td>
             <td>{{s.farmingEndDate}}</td>
-             </tr>
+            <td><button id="{{ s.surveyId }}" class="btn btn-small btn-warning my-1">Edit</button>
+                <button id="{{ s.surveyId }}" class="btn btn-small btn-danger">Delete</button>
+            </td>
+            </tr>
         {% endfor %}
         </tbody>
 
-        {% endblock %}
     </table>
-
-    </div>
+    
+</div>
+{% endblock %}
 
 </body>
 </html>
