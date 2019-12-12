@@ -4,7 +4,7 @@
 {% block content %}
  <section class="faremer-reigstration">
         <div class="container dash-block clearfix">
-            <h2 class="text-center py-5">Register new Up Chaiman</h2>
+            <h2 class="text-center py-5">Register new Up Chairman</h2>
 
     <form method="POST">
         {% if messages %}
@@ -20,6 +20,8 @@
         <input class="btn btn-success btn-block btn-lg mx-auto" type="submit" value="Submit">
 
     </form>
+   <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'showUNO' %}">UpChairman List</a></li>
+
         </div>
     </section>
 

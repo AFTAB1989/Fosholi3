@@ -2,6 +2,7 @@ from django.contrib import messages
 from django.shortcuts import render, redirect
 
 from FieldAgent import models
+from FieldAgent.models import SeasonalServey
 from UNO.forms import RegisterForm
 
 
@@ -25,3 +26,9 @@ def register(request):
             messages.error(request, f'Could not create new account. Something went wrong')
             return render(request, 'registerFA.html', {'form': form})
     return render(request, 'registerFA.html', {'form': form})
+
+
+def surveyReport(request):
+    # if request.POST.get("submit2_uno"):
+        s = SeasonalServey.objects.all()
+        return render(request, 'surveyReport.html', {'surveylist': s})

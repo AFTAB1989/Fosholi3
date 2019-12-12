@@ -22,7 +22,9 @@
        </thead>
 
         <tbody>
+
          {% for s in surveylist %}
+
              <tr>
             <td>{{ s.surveyId }}</td>
             <td>{{ s.fId }}</td>
@@ -35,12 +37,15 @@
             <td>{{s.farmingEndDate}}</td>
              </tr>
         {% endfor %}
+
         </tbody>
-
-        {% endblock %}
     </table>
-
+    </div>
+     <div class="form-group">
+        <button class="btn btn-success btn-block btn-lg" name = "submit2_uno" type="submit">Submit
+                    Survey</button>
     </div>
 
+ {% endblock %}
 </body>
 </html>

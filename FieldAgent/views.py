@@ -42,4 +42,8 @@ def addSurvey(request):
 def surveyList(request):
     s = SeasonalServey.objects.all()
     return render(request, 'allSurvey.html', {'surveylist': s})
-    # return HttpResponse('<h1> hello survey</h1>')
+
+# def submitSurvey(request):
+#     if request.POST.get("submit2_uno"):
+
+
