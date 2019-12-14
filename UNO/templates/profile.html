@@ -1,0 +1,55 @@
+{% extends 'base-uno.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="dash-block p-5">
+        {% for user in user_data %}
+            <h2 class="text-center mb-5"> Profile details </h2>
+        <table class="table table-borderless">
+            <thead>
+                <tr>
+                    <th> Label </th> 
+                    <th> Data </th>
+                </tr>
+            </thead>
+            <tr> 
+                <td>User ID : </td>
+                <td>{{ user.uno_id }}</td>
+            </tr>
+            <tr> 
+                <td>Name : </td>
+                <td>{{ user.uno_name }}</td>
+            </tr>
+            <tr> 
+                <td>Phone no : </td>
+                <td>{{ user.uno_phone }}</td>
+            </tr>
+            <tr> 
+                <td>Address :</td>
+                <td>{{ user.uno_address }}</td>
+            </tr>
+            <tr> 
+                <td>Email </td>
+                <td>{{ user.uno_email }}</td>
+            </tr>
+            <tr> 
+                <td>NID no</td>
+                <td>{{ user.uno_nid_no }}</td>
+            </tr>
+            <tr> 
+                <td>UPC ID :</td>
+                <td>{{ user.upc_id }}</td>
+            </tr>
+        </table>
+
+
+
+    <a class="btn btn-danger" href="">Edit profile</a>
+    </div>
+    {% endfor %}
+
+
+</div>
+
+{% endblock %}

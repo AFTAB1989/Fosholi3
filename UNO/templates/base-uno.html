@@ -11,6 +11,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.6.1/css/pikaday.min.css">
     <link rel="stylesheet" type="text/css" href={% static 'css/style.css' %}>
+    <style>
+        table{
+            table-layout: fixed ;
+            width: 100% ;
+        }
+        td{
+            width: 40% ;
+
+        }
+    </style>
 </head>
 
 <body>
@@ -20,8 +30,10 @@
                 id="navbarNav">
                 <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'unoHome' %}">UNO Home</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'registerFA' %}">Register Field agent</li>
+                        <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'registerFA' %}">Register Field agent</a></li>
                         <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'surveylist' %}">Survey</a></li>
+                         <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'profile' %}">Profile</a></li>
+                         <li class="nav-item" role="presentation"><a class="nav-link" href="{% url 'logout' %}">Log out</a></li>
                     
                     </ul>
             </div>

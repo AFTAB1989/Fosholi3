@@ -6,7 +6,11 @@ from django.contrib import messages
 
 # DC index page
 def show(request):
-    return render(request, 'DChome.html')
+    if request.session.has_key('user_id') and request.session.has_key('actor'):
+        return render(request, 'DChome.html',{'user_id':user_id,'actor':actor})
+    else:
+        return redirect('/Farmer/login_pg')
+
 
 
 # dc login page

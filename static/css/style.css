@@ -19,7 +19,7 @@ body{
   box-shadow: 0 2px 10px rgba(0,0,0,.1);
   background: #fff;
   padding: 20px;
-  border-top: 3px solid red; 
+  
 }
 .dash-summary{
     display: flex;

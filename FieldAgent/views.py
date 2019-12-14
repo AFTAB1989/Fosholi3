@@ -7,7 +7,11 @@ from FieldAgent import models
 
 
 def fa_dashboard(request):
-    return render(request, "field-agent-dashboard.html")
+    if request.session.has_key('user_id') and request.session.has_key('actor'):
+        return render(request, "field-agent-dashboard.html")
+    else:
+        return redirect('/Farmer/login_pg')
+
 
 
 def register_farmer(request):

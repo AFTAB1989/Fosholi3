@@ -19,7 +19,26 @@ body{
   box-shadow: 0 2px 10px rgba(0,0,0,.1);
   background: #fff;
   padding: 20px;
-  border-top: 3px solid red; 
+
+}
+.dash-block-wrapper{
+  padding:0px 20px;
+}
+.dash-block-h{
+  box-shadow: 0 2px 10px rgba(0,0,0,.1);
+  background: #fff;
+  padding: 20px;
+
+}
+.dash-block-h:hover{
+  color:#fff;
+  background:#1BA345;
+}
+.dash-block-wrapper a{
+  color:#212529;
+}
+.dash-block-wrapper a:hover{
+    text-decoration:none;
 }
 .dash-summary{
     display: flex;

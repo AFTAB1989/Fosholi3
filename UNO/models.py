@@ -20,3 +20,6 @@ class UNO(models.Model):
     uno_password = models.CharField(max_length=50)
     uno_nid_no = models.CharField(max_length=25, blank=False, unique=True)
     upc_id = models.ForeignKey(UpChairman, on_delete=models.CASCADE)
+
+    def get_absolute_url(self):
+        return reverse('author-detail', kwargs={'pk': self.pk})

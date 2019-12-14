@@ -4,45 +4,98 @@
 
 <div class="container">
 
-    <div class="row">
+    <div class="row mt-3 mb-5">
+        <div class="dash-block-wrapper col-md-4">
+        <a href="#">
+            <div class="dash-block-h">
+                <h3 class="text-center">Total surveys done </h3>
+                <p class="display-3 text-center"><b>15</b></p>
+            </div>
+        </a>
+        </div>
+        <div class="dash-block-wrapper col-md-4">
+            <a href="#">
+                <div class="dash-block-h">
+                    <h3 class="text-center">Farmers surveyed </h3>
+                    <p class="display-3 text-center"><b>10</b></p>
+                </div>
+            <a>
+        </div>
+        <div class="dash-block-wrapper col-md-4">
+            <a href="#">
+            <div class="dash-block-h">
+                <h3 class="text-center">Total farmed land </h3>
+                <span class="d-flex justify-content-center">
+                <p class="display-3 text-center "><b>30</b></p><p> hecters </p>
+                </span>
+            </div>
+            </a>
+        </div>
+        <div class="dash-block-wrapper  mt-4 col-md-6 ">
+            <div class="dash-block">
+                <h3 class="text-center">Crops farmed </h3>
+                    <table class="table">
+                        <thead>
+                            <tr class="table-primary">
+                            <th scope="col">Crop type</th>
+                            <th scope="col">Estimated production</th>
+                            <th scope="col">Land amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Mark</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>the Bird</td>
+                            </tr>
+                            <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
 
-        <div class="col-md-3 dash-block mr-2">
-            <h3>Total surveys done - </h3>
-            <p class="display-3 text-center">{{ ts }}</p>
-            <a href="#">See survey list >>></a>
-        </div>
-        <div class="col-md-4 dash-block mr-2">
-            <h3>Farmers surveyed - </h3>
-            <p class="display-3 text-center">20</p>
-            <a href="#">See farmers agent list >>></a>
-        </div>
-        <div class="col-md-3 dash-block mr-2">
-            <h3>Total farmed land </h3>
-            <p class="display-3 text-center">30</p><p> hecters </p>
-            <a href="#">See land details >>></a>
-        </div>
-        <div class="col-md-5 dash-block mt-3 mr-2">
-            <h3>Crops farmed </h3>
-            <div class="d-flex justify-content-around">
-                <p>Rice </p>
-                <p>500kg </p>
-                
+                            </tr>
+                        </tbody>
+                    </table>
+                <hr>
+                <a href="#">See more >>></a>
             </div>
-            <hr>
-            <div class="d-flex justify-content-around">
-                <p>Rice </p>
-                <p>500kg </p>
-                
-            </div>
-            <hr>
-            <div class="d-flex justify-content-around">
-                <p>Rice </p>
-                <p>500kg </p>
-                
-            </div>
-            <hr>
-            <a href="#">See more >>></a>
         </div>
+
+        <div class="col-md-6 mt-4 dash-block-wrapper">
+                <div class="dash-block">
+                    <div class="dash-header text-center "><b>Notifications</b></div>
+                    <div class="notification dash-element d-flex justify-content-between">
+                        <span>
+                            <a href="">Survey agent</a>
+                            <p>New survey added </p>
+                        </span>
+                        <button class="btn btn-info mt-1 h-75">View</button>
+                    </div>
+
+                    <div class="notification dash-element d-flex">
+                        <span>
+                            <a href="">District Comissionar</a>
+                            <p>Lorem ipsum dolar sit amet Lorem ipsum dolar sit amet Lorem ipsum dolar sit amet </p>
+                        </span>
+                        <button class="btn btn-info mt-1 h-75">View</button>
+                    </div>
+
+                    <div class="notification dash-element d-flex">
+                        <span>
+                            <a href="">Chairman</a>
+                            <p>Lorem ipsum dolar sit amet Lorem ipsum dolar sit amet Lorem ipsum dolar sit amet </p>
+                        </span>
+                        <button class="btn btn-info mt-1 h-75">View</button>
+                    </div>
+                     <a href="#">See more >>></a>
+
+                </div>
+            </div>
         
 
     </div>
