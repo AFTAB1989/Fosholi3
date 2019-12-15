@@ -34,7 +34,7 @@ def register(request):
             messages.success(request, f'New account created successfully !')
             return redirect(register)
         else:
-            messages.success(request, f'Could not create new acount. Something went wrong')
+            messages.success(request, f'Could not create new account. Something went wrong')
             return render(request, 'registerChairman.html', {'form': form})
 
     return render(request, 'registerChairman.html', {'form': form})
@@ -51,3 +51,15 @@ def surveyReportfrmUPC(request):
                'estimation': estimation}
 
     return render(request, 'Surey_report_DC.html', context)
+
+
+# def dcDistribution(request):
+#     if request.method == 'POST':
+#         d = dcDistribution(surveyId=request.POST['sID'], fId=request.POST['fID'], seasonId=request.POST['seasonID'],
+#                            areaOfFarmedLand=request.POST['areaof'], farmedCrop=request.POST['fCrop'],
+#                            cropType=request.POST['cType'], estimatedCrop=request.POST['estCrop'],
+#                            farmingStartDate=request.POST['fStart'], farmingEndDate=request.POST['fEnd'])
+#         s.save()
+#         return redirect('/surveyList/')
+#     return render(request, 'Surey_report_DC.html', context)
+
